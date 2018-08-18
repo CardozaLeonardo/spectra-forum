@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,900');
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/coolvetica.woff");
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url("../fonts/BebasNeue-webfont.woff");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: url(../img/FHBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.login-container {
+    height: 100vh;
+}
+
+.left-side {
+    height: 500px;
+}
+
+.right-side {
+    background-color: #fff;
+    height: 500px;
+}
+
+.left-side img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.left-side .logo-container .logo-text {
+    text-align: center;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    bottom: 480px;
+    color: #99B0B7;
+}
+
+.left-side .logo-container .secondary-logo-text-1 {
+    position: relative;
+    left: 70px;
+    bottom: 535px;
+    font-family: "Bebas";
+    font-size: 65px;
+    color: #80A3AC;
+}
+
+.left-side .logo-container .secondary-logo-text-2 {
+    position: relative;
+    left: 102px;
+    bottom: 590px;
+    font-family: "Bebas";
+    font-size: 65px;
+    color: #80A3AC;
+}
+
+.left-side .buttons {
+    position: absolute;
+    top: 325px;
+    left: 85px;
+}
+
+.left-side .buttons a {
+    text-decoration: none;
+}
+
+.left-side .buttons a button {
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+/* Icons Button */
+
+.left-side .buttons a .btn-icon {
+    margin-right: 7px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Google Button */
+
+.left-side .buttons a .google-btn {
+    background: #fff;
+    margin-right: 15px;
+}
+
+.left-side .buttons a .google-title-btn {
+    font-weight: 700;
+    color: rgb(175, 175, 175);
+}
+
+/* Twitter Button */
+
+.left-side .buttons a .twitter-btn {
+    background: #50ABF1;
+}
+
+.left-side .buttons a .twitter-title-btn {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Sign Up Button */
+
+.left-side .buttons a .user-signup-btn {
+    background: rgb(109, 104, 255);
+    margin-top: 37px;
+}
+
+.left-side .buttons a .btn-icon-user {
+    width: 24px;
+    height: 24px;
+}
+
+.left-side .buttons a .user-title-btn {
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px;
+}
+
+/* Login Button */
+
+.left-side .buttons a .user-login-btn {
+    background: rgb(109, 104, 255);
+    margin-top: 37px;
+    display: none;
+}
+
+/* Caption Button */
+
+.left-side .caption-btn-SM {
+    position: absolute;
+    top: 300px;
+    left: 85px;
+    color: rgb(209, 209, 209);
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.left-side .caption-btn-NA {
+    position: absolute;
+    top: 381px;
+    left: 85px;
+    color: rgb(209, 209, 209);
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Login Form */
+
+/* Title */
+
+.right-side .Login-Form h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #5082F6;
+    font-size: 50px;
+    position: relative;
+    bottom: 40px;
+    left: 0px;
+}
+
+/* Form Container */
+
+.right-side .Login-Form {
+    position: relative;
+    top: 70px;
+    left: 30px;
+}
+
+/* Form Label / Text Input */
+
+.right-side .Login-Form .form-group-container-login .form-group {
+    font-family: "Coolvetica", sans-serif;
+    font-size: 18px;
+    color: #5082F6;
+    letter-spacing: 1px;
+}
+
+/* Form Input */
+
+.right-side .Login-Form .form-group-container-login .form-group .input-login {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #5082F6;
+    color: #01184E;
+    letter-spacing: 1px;
+    width: 300px;
+    font-family: "Coolvetica", fontawesome;
+    display: block;
+}
+
+.right-side .Login-Form .form-group-container-login .form-group .input-login::placeholder {
+    color: #5082F6;
+    text-align: right;
+}
+
+.right-side .Login-Form .form-group-container-login .form-group .input-login:focus {
+    outline: none;
+}
+
+.right-side .Login-Form .form-group-container-login .user-form {
+    margin-bottom: 40px;
+}
+
+.right-side .Login-Form .form-group-container-login .custom-checkbox {
+    margin-top: 30px;
+}
+
+.right-side .Login-Form .form-group-container-login .custom-checkbox label {
+    font-family: "Coolvetica", sans-serif;
+    font-size: 14px;
+    color: #858585;
+    letter-spacing: 1px;
+    margin-right: 55px;
+}
+
+.right-side .Login-Form .form-group-container-login .custom-checkbox span a {
+    font-family: "Coolvetica", sans-serif;
+    font-size: 14px;
+    color: #949494;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.right-side .Login-Form .form-group-container-login .custom-checkbox span a:hover {
+    color: #01184E;
+}
+
+/* Login Button */
+
+.right-side .Login-Form .form-group-container-login .login-access .login-btn {
+    background-color: #5082F6;
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+    position: relative;
+    top: 30px;
+    left: -30px;
+}
+
+.right-side .Login-Form .form-group-container-login .login-access .login-btn p {
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+/* Ripple Out Effect - Login Button */
+
+@-webkit-keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+@keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+.hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.hvr-ripple-out:before {
+    content: '';
+    position: absolute;
+    border: #5082F6 solid 6px;
+    border-radius: 30px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.hvr-ripple-out:hover:before,
+.hvr-ripple-out:focus:before,
+.hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+}
+
+/* Register Form */
+
+.right-side .Register-Form {
+    position: relative;
+    top: 70px;
+    left: 30px;
+    display: none;
+}
+
+.right-side .Register-Form h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #5082F6;
+    font-size: 50px;
+    position: relative;
+    bottom: 40px;
+    left: 0px;
+}
+
+.right-side .Register-Form .form-group-container .form-group label {
+    display: block;
+    margin-bottom: 0;
+}
+
+.right-side .Register-Form .form-group-container .form-group {
+    font-family: "Coolvetica", sans-serif;
+    font-size: 17px;
+    color: #5082F6;
+    letter-spacing: 1px;
+}
+
+.Register-Form .form-group-container .form-group .input-register {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #5082F6;
+    color: #01184E;
+    letter-spacing: 1px;
+    width: 300px;
+    font-family: "Coolvetica", fontawesome;
+}
+
+.right-side .Register-Form .form-group-container .form-group .input-register:focus {
+    outline: none;
+}
+
+.right-side .Register-Form .form-group-container .custom-checkbox label a {
+    font-family: "Coolvetica", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #858585;
+    letter-spacing: 1px;
+    margin-right: 55px;
+}
+
+.right-side .Register-Form .form-group-container {
+    position: relative;
+    bottom: 40px;
+}
+
+.right-side .Register-Form .register-access .register-btn {
+    background-color: #5082F6;
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+    position: relative;
+    top: 20px;
+    left: -30px;
+}
+
+.right-side .Register-Form .register-access p {
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.right-side .Register-Form .form-group-container .form-group .input-register::placeholder {
+    color: #5082F6;
+    text-align: right;
+}
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width: 1199px) {
+    /* Login */
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 250px;
+    }
+    .right-side .Login-Form .form-group-container-login .custom-checkbox span a {
+        display: block;
+        margin: 7px 0px 0px -23px;
+    }
+    .right-side .Login-Form .form-group-container-login .custom-checkbox {
+        bottom: 10px;
+    }
+    .right-side .Login-Form .form-group-container-login .login-access .login-btn {
+        top: 20px;
+    }
+    .left-side .logo-container .logo-text {
+        font-size: 100px;
+    }
+    .left-side .logo-container .secondary-logo-text-1 {
+        font-size: 55px;
+        left: 25px;
+    }
+    .left-side .logo-container .secondary-logo-text-2 {
+        font-size: 55px;
+        bottom: 580px;
+        left: 50px;
+    }
+    .left-side .buttons {
+        top: 270px;
+        left: 50px;
+    }
+    .left-side .buttons a .twitter-btn {
+        display: block;
+        margin-top: 20px;
+    }
+    .left-side .buttons a .user-signup-btn {
+        margin-top: 20px
+    }
+    .left-side .buttons a .user-login-btn {
+        margin-top: 20px;
+    }
+    .left-side .caption-btn-SM,
+    .caption-btn-NA {
+        display: none;
+    }
+    /* Register */
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 250px;
+    }
+    .right-side .Register-Form h1 {
+        font-size: 40px;
+    }
+    .right-side .Register-Form .form-group-container .custom-checkbox label a {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 300px;
+    }
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 300px;
+    }
+    .left-side .logo-container .logo-text {
+        font-size: 60px;
+    }
+    .left-side .logo-container .secondary-logo-text-1 {
+        font-size: 46px;
+        left: 22px;
+        bottom: 520px;
+    }
+    .left-side .logo-container .secondary-logo-text-2 {
+        font-size: 46px;
+        left: 45px;
+        bottom: 560px;
+    }
+    .logo-container {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        overflow-y: auto;
+        background-image: url("../img/BackgroundMV.jpg");
+    }
+    .right-side .Register-Form .form-group-container {
+        bottom: 10px;
+    }
+    .right-side .Login-Form .form-group-container-login {
+        bottom: 10px;
+    }
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 450px;
+    }
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 450px;
+    }
+    .left-side .logo-container {
+        display: none;
+    }
+    .right-side .Register-Form .form-group-container .input-register {
+        display: block;
+        margin-right: -10px;
+    }
+    .left-side .buttons {
+        position: absolute;
+        top: 160px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    .left-side .buttons a .google-btn {
+        margin-right: 0px;
+    }
+    .left-side .buttons a .twitter-btn {
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+    .left-side .buttons a .user-signup-btn {
+        margin-top: 40px;
+        margin-right: 0px;
+    }
+    .left-side .buttons a .user-login-btn {
+        margin-top: 40px;
+        margin-right: 0px;
+    }
+    .left-side .caption-btn-SM {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    .left-side .caption-btn-NA {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    .left-side {
+        height: 276px;
+        bottom: 18px;
+    }
+    .right-side {
+        height: 555px;
+        bottom: 7px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 390px;
+    }
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 280px;
+    }
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 280px;
+    }
+    .right-side .Login-Form .form-group-container-login h1,
+    .form-group,
+        {
+        left: 15px;
+    }
+    .right-side .Register-Form .form-group-container h1,
+    .form-group,
+        {
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 260px;
+    }
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .right-side .Login-Form .form-group-container-login .form-group .input-login {
+        width: 220px;
+    }
+    .right-side .Register-Form .form-group-container .form-group .input-register {
+        width: 220px;
+    }
+    .left-side .buttons {
+        top: 240px;
+    }
+    .left-side {
+        height: 280px;
+    }
+    .left-side .caption-btn-SM {
+        top: 45px;
+        font-size: 12px;
+    }
+    .left-side .caption-btn-NA {
+        top: 190px;
+        font-size: 12px;
+    }
+    .left-side .buttons {
+        top: 160px;
+    }
+    .left-side .buttons a .user-signup-btn {
+        margin-top: 50px;
+    }
+    .left-side .buttons a .user-login-btn {
+        margin-top: 50px;
+    }
+}
