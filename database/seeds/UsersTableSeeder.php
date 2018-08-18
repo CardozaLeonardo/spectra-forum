@@ -5,7 +5,7 @@ use App\User;
 
 class UsersTableSeeder extends Seeder
 {
-    /**
+    /**s
      * Run the database seeds.
      *
      * @return void
@@ -16,6 +16,6 @@ class UsersTableSeeder extends Seeder
        $user->name = 'Mark';
        $user->email = 'markfirst@gmail.com';
        $user->password = Hash::make('mark34567');
-       
+
     }
 }

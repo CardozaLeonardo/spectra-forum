@@ -22,7 +22,7 @@
                 <img src="img/Left-Side Background/Left-Side-Background_2.jpg" alt="">
                 <div class="logo-container">
                     <p class="logo-text">SPECTRA</p>
-                    <p class="secondary-logo-text-1">" LEARN, INSPIRE,</p>
+                    <p class="secondary-logo-text-1"> LEARN, INSPIRE,</p>
                     <p class="secondary-logo-text-2">CREATE</p>
                 </div>
                 <p class="caption-btn-SM">SOCIAL MEDIA</p>
