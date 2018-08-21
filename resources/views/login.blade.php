@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @yield('head')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/Favicon/Favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../resources/assets/login/img/Favicon/Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="css/Hover-master/css/hover-min.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../resources/assets/login/css/Hover-master/css/hover-min.css">
+    <link rel="stylesheet" href="../resources/assets/login/css/login.css">
     <title>SPECTRA LOGIN</title>
 </head>
 <body>
-    <script src="js/sweetalert2.all.min.js"></script>
-    <script src="js/validation.js"></script>
+  @yield('body')
+    <script src="../resources/resources/assets/login/js/sweetalert2.all.min.js"></script>
+    <script src="../resources/assets/login/js/validation.js"></script>
     <div class="container">
         <div class="row login-container justify-content-center align-items-center">
             <div class="left-side order-1 order-md-0 col-sm-12 col-md-5 col-lg-6 p-0">
-                <img src="img/Left-Side Background/Left-Side-Background_2.jpg" alt="">
+                <img src="../resources/assets/login/img/Left-Side Background/Left-Side-Background_2.jpg" alt="">
                 <div class="logo-container">
                     <p class="logo-text">SPECTRA</p>
                     <p class="secondary-logo-text-1"> LEARN, INSPIRE,</p>
@@ -28,14 +30,14 @@
                 <p class="caption-btn-SM">SOCIAL MEDIA</p>
                 <p class="caption-btn-NA" id="caption-btn-NA">CREATE NEW ACCOUNT</p>
                 <div class="buttons">
-                    <a href=""><button type="button" class="btn google-btn hvr-pop"><span><img class="btn-icon" src="img/Btn-Icons/Google.png" alt=""></span><span class="google-title-btn">Login with Google</span></button></a>
-                    <a href=""><button type="button" class="btn twitter-btn hvr-pop"><span><img class="btn-icon" src="img/Btn-Icons/Twitter.png" alt=""></span><span class="twitter-title-btn">Login with Twitter</span></button></a>
-                    <a href="#"><button type="button" class="btn user-signup-btn hvr-pop" id="user-signup-btn"><span><img class="btn-icon-user float-left" src="img/Btn-Icons/User.png" alt=""></span><span class="user-title-btn">SIGN UP</span></button></a>
-                    <a href="#"><button type="button" class="btn user-login-btn hvr-pop" id="user-login-btn"><span><img class="btn-icon-user float-left" src="img/Btn-Icons/User.png" alt=""></span><span class="user-title-btn">LOGIN</span></button></a>
+                    <a href=""><button type="button" class="btn google-btn hvr-pop"><span><img class="btn-icon" src="../resources/assets/login/img/Btn-Icons/Google.png" alt=""></span><span class="google-title-btn">Login with Google</span></button></a>
+                    <a href=""><button type="button" class="btn twitter-btn hvr-pop"><span><img class="btn-icon" src="../resources/assets/login/img/Btn-Icons/Twitter.png" alt=""></span><span class="twitter-title-btn">Login with Twitter</span></button></a>
+                    <a href="#"><button type="button" class="btn user-signup-btn hvr-pop" id="user-signup-btn"><span><img class="btn-icon-user float-left" src="../resources/assets/login/img/Btn-Icons/User.png" alt=""></span><span class="user-title-btn">SIGN UP</span></button></a>
+                    <a href="#"><button type="button" class="btn user-login-btn hvr-pop" id="user-login-btn"><span><img class="btn-icon-user float-left" src="../resources/assets/login/img/Btn-Icons/User.png" alt=""></span><span class="user-title-btn">LOGIN</span></button></a>
                 </div>
             </div>
             <div class="right-side order-0 order-md-1 col-sm-12 col-md-6 col-lg-4 p-0">
-                <form action="" method="post" id="Login-Form" class="Login-Form" onsubmit="return LoginFormVal()">
+                <form action="{{ route('login') }}" method="post" id="Login-Form" class="Login-Form" onsubmit="return LoginFormVal()">
                     <h1>Login</h1>
                     <div class="form-group-container-login">
                         <div class="form-group user-form">
@@ -56,7 +58,7 @@
                         </div>
                     </div>
                 </form>
-                <form action="" method="post" id="Register-Form" class="Register-Form" onsubmit="return RegisterFormVal()">
+                <form action="{{ route('register') }}" method="post" id="Register-Form" class="Register-Form" onsubmit="return RegisterFormVal()">
                    <h1>New Account</h1> 
                    <div class="form-group-container">
                         <div class="form-group ">
@@ -87,6 +89,6 @@
             </div>
         </div>
     </div>
-    <script src="js/login.js"></script>
+    <script src="../resources/assets/login/js/login.js"></script>
 </body>
 </html>
