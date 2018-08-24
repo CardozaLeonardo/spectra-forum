@@ -37,16 +37,17 @@
                 </div>
             </div>
             <div class="right-side order-0 order-md-1 col-sm-12 col-md-6 col-lg-4 p-0">
-                <form action="{{ route('login') }}" method="post" id="Login-Form" class="Login-Form" onsubmit="return LoginFormVal()">
+                <form action="{{ route('user.login') }}" method="post" id="Login-Form" class="Login-Form" onsubmit="return LoginFormVal()">
+                {{ csrf_field() }}
                     <h1>Login</h1>
                     <div class="form-group-container-login">
                         <div class="form-group user-form">
                             <label for="Username">Username</label>
-                            <input type="text" class="input-login is-invalid" placeholder="&#xf007;" name="Username" id="Username" autocomplete="off" minlength="3" maxlength="15">
+                            <input type="text" class="input-login is-invalid" placeholder="&#xf007;" name="email" id="Username" autocomplete="off" minlength="3" maxlength="40">
                         </div>
                         <div class="form-group password-form">
                             <label for="Password">Password</label>
-                            <input type="password" class="input-login" placeholder="&#xf023;" name="Password" id="PasswordLogin" autocomplete="off" minlength="6" maxlength="30">
+                            <input type="password" class="input-login" placeholder="&#xf023;" name="password" id="PasswordLogin" autocomplete="off" minlength="6" maxlength="30">
                         </div>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="RememberUser">
@@ -58,24 +59,25 @@
                         </div>
                     </div>
                 </form>
-                <form action="{{ route('register') }}" method="post" id="Register-Form" class="Register-Form" onsubmit="return RegisterFormVal()">
+                <form action="{{ route('user.registrar') }}" method="post" id="Register-Form" class="Register-Form" onsubmit="return RegisterFormVal()">
+                {{ csrf_field() }}
                    <h1>New Account</h1> 
                    <div class="form-group-container">
                         <div class="form-group ">
                             <label for="Name-Register">Name</label>
-                            <input type="text" name="Name-Register" id="Name-Register" class="input-register" placeholder="Aa" autocomplete="off" maxlength="50">
+                            <input type="text" name="name" id="Name-Register" class="input-register" placeholder="Aa" autocomplete="off" maxlength="50">
                         </div>
                         <div class="form-group">
                             <label for="Email-Register">Email</label>
-                            <input type="email" name="Email-Register" id="Email-Register" class="input-register" placeholder="&#xf0e0" autocomplete="off">
+                            <input type="email" name="email" id="Email-Register" class="input-register" placeholder="&#xf0e0" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="Username-Register">Username</label>
-                            <input type="text" name="Username-Register" id="Username-Register" class="input-register" placeholder="&#xf007;" autocomplete="off" minlength="3" maxlength="15">
+                            <input type="text" name="username" id="Username-Register" class="input-register" placeholder="&#xf007;" autocomplete="off" minlength="3" maxlength="15">
                         </div>
                         <div class="form-group">
                             <label for="Password-Register">Password</label>
-                            <input type="password" name="Password-Register" id="Password-Register" class="input-register" placeholder="&#xf023;" autocomplete="off" minlength="6" maxlength="30">
+                            <input type="password" name="password" id="Password-Register" class="input-register" placeholder="&#xf023;" autocomplete="off" minlength="6" maxlength="30">
                         </div>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="TermsConds" required>

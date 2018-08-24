@@ -17,8 +17,11 @@ Route::get('/', function () {
 
 Route::get('/log', function(){
     return view('login');
-});
+})->name('log');
 
+
+Route::post('/log/save', 'LoginController@store')->name('user.registrar');
+Route::post('/log/verify', 'LoginController@authenticate')->name('user.login');
 
 Auth::routes();
 
