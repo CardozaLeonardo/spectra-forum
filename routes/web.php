@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('indice');
 });
 
 Route::get('/log', function(){
