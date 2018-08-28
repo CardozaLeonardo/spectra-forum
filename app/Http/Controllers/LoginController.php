@@ -65,17 +65,10 @@ class LoginController extends Controller
         {
            return redirect()->route('home');
         }else{
-            //return redirect()->route('log');
-            $user = User::find(1);
+            return redirect()->route('log');
             
-            if(Auth::check('leo1234a', '$2y$10$EBNoVOMN8FOyuvrU5vk0NOAPlUBH.bSjM8w3.xoWS076bdvGsEKi.'))
-            {
-                return 'YES';
-            }else{
-                return 'NO';
-            }
-            //return $user->password;
         }
+
     }
 
     /**
