@@ -11,13 +11,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="css/Hover-master/css/hover.css">
+    <link rel="stylesheet" href="../resources/assets/login/css/Hover-master/css/hover.css">
     <link rel="stylesheet" href="../resources/assets/Spectra/css/home.css">
     <script src="../resources/assets/Spectra/js/app.js"></script>
     <title>SPECTRA</title>
 </head>
 <body>
     <section class="BGPrincipal"></section>
+    @yield('sidebar')
     <div class="side-bar d-flex flex-wrap justify-content-center">
         <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Home"><img src="../resources/assets/Spectra/img/SideBar/home.svg" alt=""></a>
         <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Microsoft"><img src="../resources/assets/Spectra/img/SideBar/microsoft2.svg" alt=""></a>
@@ -58,6 +59,7 @@
         </nav>
     </div>
     <div class="container-fluid">
+    
         <main class="MainContainer row" id="MainContainer">
             <div class="col-lg-12">
                 <div class="Contenido">
@@ -67,6 +69,7 @@
         </main>
     </div>
     <footer class="container-fluid">
+    @yield('footer')
         <div class="row FooterLogoContainer">
             <div class="col-12 FooterLogo"><h1>SPECTRA</h1></div>
         </div>
@@ -81,6 +84,7 @@
             </div>
         </div>
         <div class="row FooterMenuContainer">
+        
             <div class="col-lg-4 col-6 FooterCat">
                 <h3>Categorías</h3>
                 <a href=""><p>Microsoft</p></a>
@@ -97,6 +101,7 @@
                 <a href=""><p>Data Science</p></a>
             </div>
             <div class="col-lg-3 col-6 FooterMenu">
+            @yield('footer')
                 <h3>Menú</h3>
                 <a href="">
                     <p>Inicio</p>
@@ -130,6 +135,7 @@
                 </div>
             </div>
         </div>
+    
     </footer>
 </body>
 </html>

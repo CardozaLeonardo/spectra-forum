@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,12 @@
     <link rel="stylesheet" href="../resources/assets/login/css/login.css">
     <title>SPECTRA LOGIN</title>
 </head>
+
+<style>
+    strong{
+        color: rgb(202, 77, 77);
+    }
+</style>
 <body>
   @yield('body')
     <script src="../resources/resources/assets/login/js/sweetalert2.all.min.js"></script>
@@ -71,9 +78,21 @@
                             <label for="Email-Register">Email</label>
                             <input type="email" name="email" id="Email-Register" class="input-register" placeholder="&#xf0e0" autocomplete="off">
                         </div>
+                        @if ($errors->any())
+                                <span class="help-block">
+                                  @foreach ($errors->get('email') as $message)
+                                    <strong>{{ $message }}</strong>
+                                  @endforeach
+                                </span>
+                        @endif
                         <div class="form-group">
                             <label for="Username-Register">Username</label>
                             <input type="text" name="username" id="Username-Register" class="input-register" placeholder="&#xf007;" autocomplete="off" minlength="3" maxlength="15">
+                            @if ($errors->has('username'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="Password-Register">Password</label>
@@ -91,6 +110,12 @@
             </div>
         </div>
     </div>
+
+    
+
     <script src="../resources/assets/login/js/login.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

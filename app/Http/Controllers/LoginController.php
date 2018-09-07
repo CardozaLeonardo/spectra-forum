@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Validator;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -36,14 +37,35 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User;
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->username = $request->input('username');
-        $user->password = bcrypt($request->input('username'));
-        $user->save();
+        $mensaje = [
+            'username.required' => 'Se necesita un nombre de usuario',
+            'username.unique' => 'Ya existe este username',
+            'email.unique' => 'Este correo ya está en uso',
+        ];
 
-        return redirect()->route('log');
+        $valid = Validator::make($request->all(), [
+            'username' => 'required|string|max:40|unique:users,username',
+            'email' => 'unique:users,email|required|string|email|max:80|',
+            'password' => 'required|string|max:80',
+            'name' => 'required|string|max:255',
+        ], $mensaje);
+
+        //$user = $request->validated();
+
+        if($valid->fails())
+        {
+            return redirect('/log')->withErrors($valid)->withInput();
+        }else{
+            $user = new User;
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->username = $request->input('username');
+            $user->password = bcrypt($request->input('password'));
+            $user->save();
+            return redirect()->route('log')->with('mensaje',$mensaje);
+        }
+ 
+        
     }
 
     /**
@@ -91,7 +113,7 @@ class LoginController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
