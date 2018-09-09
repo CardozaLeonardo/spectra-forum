@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
 * {
     box-sizing: border-box;
 }
@@ -10,86 +10,28 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
     background-color: #363D45;
 }
-
-.BGPrincipal {
-    position: fixed;
+header{
+    height: 400px;
     width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-    background-image: url(../img/Background/NormalScreen_2.jpg);
+    background-image: url(../img/Bg-Home.jpg);
     background-size: cover;
-    background-position: center 0px;
     background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
+    border: none;
 }
-.nav-wrapper .Filter{
+header h1{
     display: none;
 }
-@media screen and (min-width: 1920px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/PrincipalBG.jpg)
-    }
-}
 
-@media screen and (max-width: 1050px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/1024-2.jpg)
-    }
-}
-
-@media screen and (max-width: 840px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/768-2.jpg)
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/640.jpg)
-    }
-    .side-bar{
-        display: none!important;
-    }
-    footer .FooterMenuContainer .FooterRight{
-        padding-left: 20px!important;
-    }
-    footer .FooterMenuContainer .FooterCat{
-        padding-left: 20px!important; 
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/500.jpg)
-    }
-    .Contenido {
-        margin-left: 0 !important;
-    }
-    .nav-wrapper .Filter{
-        display: inline-block
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/350.jpg)
-    }
-}
-
-@media screen and (max-width: 260px) {
-    .BGPrincipal {
-        background-image: url(../img/Background/260.jpg)
-    }
+.nav-wrapper .Filter{
+    display: none;
 }
 
 nav {
     margin-left: -20px;
-    margin-top: 10px;
 }
 
 nav ul li {
@@ -152,7 +94,54 @@ nav ul li input:focus {
 nav ul .Filter{
     display: none;
 }
+
+/* Opciones de Usuario oculta */
+nav .nav-wrapper .UserOptions{
+    display: none;
+}
+
+nav .nav-wrapper .UserOptions .dropdown .ButtonUserMenu{
+    background: none;
+    cursor: pointer;
+}
+nav .nav-wrapper .UserOptions .dropdown .ButtonUserMenu .img-user{
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    margin-right: 7px;
+}
+nav .nav-wrapper .UserOptions .dropdown .ButtonUserMenu{
+    color: rgb(231, 231, 231);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+
+nav .nav-wrapper .UserOptions .dropdown .dropdown-menu{
+    background-color: #363D45;
+    border: none;
+    margin-top: 8px;
+    border-top: 2px solid rgba(255, 255, 255, .1);
+}
+nav .nav-wrapper .UserOptions .dropdown .dropdown-menu .dropdown-item{
+    font-size: 14px;
+    text-align: center;
+    color: rgb(225,225,225);
+    font-family: 'Poppins', sans-serif;
+}
+nav .nav-wrapper .UserOptions .dropdown .dropdown-menu .dropdown-item i{
+    text-align: left;
+    margin-right: 8px;
+}
+nav .nav-wrapper .UserOptions .dropdown .dropdown-menu .dropdown-item:hover{
+    background-color: rgba(255, 255, 255, .1);
+}
 @media screen and (max-width: 1200px) {
+    header{
+        background-image: url(../img/Bg-Home1200px.jpg);
+    }
     .nav-wrapper {
         position: fixed;
         top: 0;
@@ -166,7 +155,7 @@ nav ul .Filter{
     }
     .nav-wrapper ul {
         position: absolute;
-        top: 45%;
+        top: 46%;
         transform: translateY(-50%);
         width: 100%;
     }
@@ -205,13 +194,14 @@ nav ul .Filter{
         margin-left: 0;
     }
     .nav-wrapper ul li a {
-        padding: 10px;
+        padding: 5px;
         opacity: 0;
         color: #000;
         font-weight: 700;
         transform: translateX(-20px);
         transition: all 0.2s ease;
     }
+
     nav ul li input {
         color: #000;
         border-bottom: 2px solid #000;
@@ -225,9 +215,9 @@ nav ul .Filter{
         color: #000;
     }
     .nav-btn {
-        position: fixed;
+        position: absolute;
         right: 10px;
-        top: 10px;
+        top: 17px;
         display: block;
         width: 48px;
         height: 48px;
@@ -277,19 +267,64 @@ nav ul .Filter{
         opacity: 1;
         transform: translateX(0);
     }
+    nav .nav-wrapper .UserOptions .dropdown .ButtonUserMenu{
+        margin-top: 20px;
+        margin-right: 10px;
+        color: rgb(0, 0, 0);
+    }
+    nav .nav-wrapper .UserOptions .dropdown .dropdown-menu{
+        background-color: #fff;
+        margin-top: 0;
+        padding: 0;
+    }
+    nav .nav-wrapper .UserOptions .dropdown .dropdown-menu .dropdown-item{
+        color: #000;
+        padding: 8px;
+        font-size: 14px;
+    }
 }
-
 .hidden {
     display: none;
 }
 
+@media screen and (max-width: 675px) {
+    header{
+        background-image: url(../img/Bg-Home675px.jpg); 
+    }
+}
+
+@media screen and (max-width: 600px){
+    header h1{
+        display: inline-block;
+        line-height: 80px;
+        font-family: 'Coolvetica', sans-serif;
+        color: #9eaef9;
+        font-size: 55px;
+        padding-left: 15px;
+    }  
+    header{
+        height: 80px;
+        background-image: url(../img/HeaderGradient.jpg);
+    }
+}
+@media screen and (max-width: 500px){
+    .nav-wrapper .Filter{
+        display: inline-block
+    }
+}
+@media screen and (max-width: 361px){
+    nav .nav-wrapper li a{
+        font-size: 16px!important;
+    }
+}
 .side-bar {
     height: 100vh;
     width: 50px;
-    background-color: #3A4556;
+    background-color: #131f29;
     position: fixed;
     z-index: 3;
-    top: -3px;
+    top: 0px;
+    padding-bottom: 5px;
 }
 
 .side-bar a {
@@ -301,14 +336,13 @@ nav ul .Filter{
     width: 26px;
     height: 26px;
 }
-
 .MainContainer {
     height: 1000px;
-    background-color: #363D45;
+    background-color: rgb(26, 41, 53);
 }
 
 .Contenido {
-    margin-top: 80px;
+    margin-top: 20px;
     margin-left: 65px;
 }
 
@@ -318,11 +352,17 @@ nav ul .Filter{
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
+@media screen and (max-width: 835px){
+    .side-bar{
+        display: none!important;
+    }
+    .Contenido {
+        margin-left: 0 !important;
+    }
+}
 /* Footer */
 footer{
-    background-color: rgb(47, 57, 73);
+    background-color: #0c141b;
 }
 footer .FooterLogoContainer{
     border-bottom: 2px solid rgba(255, 255, 255, .1);
@@ -336,10 +376,9 @@ footer .FooterLogo h1{
     margin: 0;
     font-size: 140px;
     font-family: 'Coolvetica', sans-serif;
-    line-height: 170px;
     font-weight: bold;
-    color: #fff;
-    opacity: 0.5;
+    line-height: 170px;
+    color: rgba(255, 255, 255, .9);
     letter-spacing: 4px;
 }
 footer .FollowContainer{
@@ -357,7 +396,7 @@ footer .Follow a{
 footer .Follow span{
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -413,7 +452,13 @@ footer .FooterMenuContainer p{
     color: rgba(255, 255, 255, .8);
     margin: 5px 0;
 }
-
+footer .FooterMenuContainer p:hover{
+    color: #6883a7;
+    transition: all .3s ease-in;
+}
+footer .FooterMenuContainer .copyright:hover{
+    color: rgba(255, 255, 255, 0.705);
+}
 footer .FooterRight label{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -473,12 +518,26 @@ footer .FooterRight .Copyright p{
         margin-top: 5px;
     }
 }
+@media screen and (max-width: 835px) {
+    footer .FooterMenuContainer .FooterRight{
+        padding-left: 20px!important;
+    }
+    footer .FooterMenuContainer .FooterCat{
+        padding-left: 20px!important; 
+    }
+}
 @media screen and (max-width: 730px){
     footer .FooterLogoContainer .FooterLogo h1{
         font-size: 110px!important;
     }
 }
 @media screen and (max-width: 510px){
+    footer .FooterLogo{
+        height: 100px;
+    }
+    footer .FooterLogo h1{
+        line-height: 100px;
+    }
     footer .FooterLogoContainer .FooterLogo h1{
         font-size: 90px!important;
     }

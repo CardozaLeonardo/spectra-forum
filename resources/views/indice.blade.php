@@ -36,28 +36,40 @@
         <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Publicaciones"><img src="../resources/assets/Spectra/img/SideBar/message.svg" alt=""></a>
         <a href="Forum/Forum.html" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Foro"><img src="../resources/assets/Spectra/img/SideBar/group.svg" alt=""></a>
     </div>
-    <div class="container">
-        <nav>
-            <input type="checkbox" id="nav" class="hidden">
-            <label for="nav" class="nav-btn">
-                <i></i>
-                <i></i>
-                <i></i>
-            </label>
-            <div class="nav-wrapper" id="nav-wrapper">
-                <ul>
-                    <li><a href="#" class="hvr-push">INICIO</a></li>
-                    <li><a href="#" class="hvr-push">NOTICIAS</a></li>
-                    <li><a href="#" class="hvr-push">DESTACADOS</a></li>
-                    <li class="Filter" id="Filter"><a href="../resources/assets/Spectra/filter.html" class="hvr-push">FILTRAR</a></li>
-                    <li><a href="#" class="hvr-push">BLOG</a></li>
-                    <li><a href="{{ route('forum') }}" class="hvr-push">FORO</a></li>
-                    <li><input type="search" placeholder="Buscar                                        &#xf002;"></li>
-                    <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <header class="BGPrincipal">
+        <h1>SPECTRA</h1>
+        <div class="container">
+            <nav>
+                <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+                <div class="nav-wrapper" id="nav-wrapper">
+                    <ul>
+                        <li><a href="#" class="hvr-push">INICIO</a></li>
+                        <li><a href="#" class="hvr-push">NOTICIAS</a></li>
+                        <li><a href="#" class="hvr-push">DESTACADOS</a></li>
+                        <li class="Filter" id="Filter"><a href="../resources/assets/Spectra/filter.html" class="hvr-push">FILTRAR</a></li>
+                        <li><a href="#" class="hvr-push">BLOG</a></li>
+                        <li><a href="{{ route('forum') }}" class="hvr-push">FORO</a></li>
+                        <li><input type="search" placeholder="Buscar                                        &#xf002;"></li>
+                        <li class="UserOptions">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span></button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
+                                    <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
+                                    <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
     <div class="container-fluid">
     
         <main class="MainContainer row" id="MainContainer">
