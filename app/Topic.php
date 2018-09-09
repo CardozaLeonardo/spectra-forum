@@ -19,4 +19,9 @@ class Topic extends Model
     {
         return $this->hasMany('App\Reply');
     }
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }

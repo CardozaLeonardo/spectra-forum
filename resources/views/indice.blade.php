@@ -51,7 +51,7 @@
                     <li><a href="#" class="hvr-push">DESTACADOS</a></li>
                     <li class="Filter" id="Filter"><a href="../resources/assets/Spectra/filter.html" class="hvr-push">FILTRAR</a></li>
                     <li><a href="#" class="hvr-push">BLOG</a></li>
-                    <li><a href="#" class="hvr-push">FORO</a></li>
+                    <li><a href="{{ route('forum') }}" class="hvr-push">FORO</a></li>
                     <li><input type="search" placeholder="Buscar                                        &#xf002;"></li>
                     <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
                 </ul>

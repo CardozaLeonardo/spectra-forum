@@ -13,12 +13,23 @@
 
 Route::get('/', function () {
     return view('indice');
-});
+})->name('indice');
 
 Route::get('/log', function(){
     return view('login');
 })->name('log');
 
+Route::get('/file', function () {
+    return view('file');
+});
+
+Route::get('/forum', function(){
+    return view('forum.forum');
+})->name('forum');
+
+Route::get('/forum/new_entry', function(){
+    return view('forum.newentry');
+})->name('forum.newentry')->middleware('user');
 
 Route::post('/log/save', 'LoginController@store')->name('user.registrar');
 Route::post('/log/verify', 'LoginController@authenticate')->name('user.login');
