@@ -27,9 +27,7 @@ Route::get('/forum', function(){
     return view('forum.forum');
 })->name('forum');
 
-Route::get('/forum/new_entry', function(){
-    return view('forum.newentry');
-})->name('forum.newentry')->middleware('user');
+Route::get('/forum/new_entry', 'TopicController@create')->name('forum.newentry')->middleware('user');
 
 Route::post('/log/save', 'LoginController@store')->name('user.registrar');
 Route::post('/log/verify', 'LoginController@authenticate')->name('user.login');
@@ -37,3 +35,5 @@ Route::post('/log/verify', 'LoginController@authenticate')->name('user.login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/forum/newentry/save', 'TopicController@store')->name('topic.store');

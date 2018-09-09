@@ -236,7 +236,7 @@
                         </div>
                     </a>
                     <div class="pag">
-                        kksjsjksskjsjsj
+                        
                     </div>
                 </div>
             </div>
