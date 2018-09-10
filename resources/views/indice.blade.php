@@ -36,15 +36,15 @@
                         <li><a href="#" class="hvr-push">BLOG</a></li>
                         <li><a href="{{ route('forum') }}" class="hvr-push">FORO</a></li>
                         <li><input type="search" placeholder="Buscar                                        &#xf002;"></li>
-                        <!--<li class="UserOptions">
+                        <li class="UserOptions">
                             <div class="dropdown">
-                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span></button>
+                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span>Hola que tal</button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
                                     <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
                                     <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </div>
                             </div>
-                        </li>-->
+                        </li>
                         <!--<li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>-->
                     </ul>
                 </div>
