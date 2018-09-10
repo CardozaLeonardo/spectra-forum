@@ -17,26 +17,7 @@
     <title>SPECTRA</title>
 </head>
 <body>
-    
-    @yield('sidebar')
-    <div class="side-bar d-flex flex-wrap justify-content-center">
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Home"><img src="../resources/assets/Spectra/img/SideBar/home.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Microsoft"><img src="../resources/assets/Spectra/img/SideBar/microsoft2.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Apple"><img src="../resources/assets/Spectra/img/SideBar/apple.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Open Source"><img src="../resources/assets/Spectra/img/SideBar/ubuntu.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Google"><img src="../resources/assets/Spectra/img/SideBar/search.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Android"><img src="../resources/assets/Spectra/img/SideBar/android.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Programación"><img src="../resources/assets/Spectra/img/SideBar/code.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Machine Learning"><img src="../resources/assets/Spectra/img/SideBar/chip.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Cryptocurrencys"><img src="../resources/assets/Spectra/img/SideBar/bitcoin.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Seguridad Informática"><img src="../resources/assets/Spectra/img/SideBar/security-on.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Videojuegos"><img src="../resources/assets/Spectra/img/SideBar/console-2.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Diseño"><img src="../resources/assets/Spectra/img/SideBar/layers.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Data Science"><img src="../resources/assets/Spectra/img/SideBar/big-data.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Publicaciones"><img src="../resources/assets/Spectra/img/SideBar/message.svg" alt=""></a>
-        <a href="Forum/Forum.html" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Foro"><img src="../resources/assets/Spectra/img/SideBar/group.svg" alt=""></a>
-    </div>
-    <header class="BGPrincipal">
+<header class="BGPrincipal">
         <h1>SPECTRA</h1>
         <div class="container">
             <nav>
@@ -70,7 +51,25 @@
             </nav>
         </div>
     </header>
-    <div class="container-fluid">
+    @yield('sidebar')
+    <div class="side-bar d-flex flex-wrap justify-content-center">
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Home"><img src="../resources/assets/Spectra/img/SideBar/home.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Microsoft"><img src="../resources/assets/Spectra/img/SideBar/microsoft2.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Apple"><img src="../resources/assets/Spectra/img/SideBar/apple.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Open Source"><img src="../resources/assets/Spectra/img/SideBar/ubuntu.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Google"><img src="../resources/assets/Spectra/img/SideBar/search.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Android"><img src="../resources/assets/Spectra/img/SideBar/android.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Programación"><img src="../resources/assets/Spectra/img/SideBar/code.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Machine Learning"><img src="../resources/assets/Spectra/img/SideBar/chip.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Cryptocurrencys"><img src="../resources/assets/Spectra/img/SideBar/bitcoin.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Seguridad Informática"><img src="../resources/assets/Spectra/img/SideBar/security-on.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Videojuegos"><img src="../resources/assets/Spectra/img/SideBar/console-2.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Diseño"><img src="../resources/assets/Spectra/img/SideBar/layers.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Data Science"><img src="../resources/assets/Spectra/img/SideBar/big-data.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Publicaciones"><img src="../resources/assets/Spectra/img/SideBar/message.svg" alt=""></a>
+        <a href="Forum/Forum.html" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Foro"><img src="../resources/assets/Spectra/img/SideBar/group.svg" alt=""></a>
+    </div>
+    <div class="container-fluid MainGeneral">
     
         <main class="MainContainer row" id="MainContainer">
             <div class="col-lg-12">
