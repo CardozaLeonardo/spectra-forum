@@ -17,7 +17,7 @@
     <title>SPECTRA</title>
 </head>
 <body>
-    <section class="BGPrincipal"></section>
+    
     @yield('sidebar')
     <div class="side-bar d-flex flex-wrap justify-content-center">
         <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Home"><img src="../resources/assets/Spectra/img/SideBar/home.svg" alt=""></a>
@@ -55,7 +55,7 @@
                         <li><a href="#" class="hvr-push">BLOG</a></li>
                         <li><a href="{{ route('forum') }}" class="hvr-push">FORO</a></li>
                         <li><input type="search" placeholder="Buscar                                        &#xf002;"></li>
-                        <li class="UserOptions">
+                        <!--<li class="UserOptions">
                             <div class="dropdown">
                                 <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span></button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
@@ -63,8 +63,8 @@
                                     <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </div>
                             </div>
-                        </li>
-                        <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
+                        </li>-->
+                        <!--<li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>-->
                     </ul>
                 </div>
             </nav>
