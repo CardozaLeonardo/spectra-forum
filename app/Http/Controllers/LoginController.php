@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -102,6 +103,13 @@ class LoginController extends Controller
     public function edit($id)
     {
         //
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return Redirect::back();
     }
 
     /**

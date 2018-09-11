@@ -37,3 +37,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/forum/newentry/save', 'TopicController@store')->name('topic.store');
+
+Route::get('/logout', 'LoginController@logout')->name('logout');

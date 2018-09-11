@@ -82,9 +82,9 @@ nav ul li input:focus {
 }
 
 /* Opciones de Usuario oculta */
-nav .nav-wrapper .UserOptions{
+/*nav .nav-wrapper .UserOptions{
     display: none;
-}
+}*/
 
 nav .nav-wrapper .UserOptions .dropdown .ButtonUserMenu{
     background: none;

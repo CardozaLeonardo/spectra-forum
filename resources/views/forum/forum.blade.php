@@ -46,17 +46,20 @@
                         <li><a href="#" class="hvr-pop">BLOG</a></li>
                         <li><a href="{{ route('forum') }}" class="hvr-pop">FORO</a></li>
                         <li><form action="" method="get"><input type="text" placeholder="Buscar                                        &#xf002;"></form></li>
+                        @if(Auth::check())
                         <li class="UserOptions">
+                            <?php $user = Auth::user(); ?>
                             <div class="dropdown">
-                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span></button>
+                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
                                     <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
-                                    <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                    <a href="{{ route('logout') }}" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="{{ route('log') }}" class="hvr-pop"><i class="user fas fa-user"></i><span>REGÍSTRATE
-                                    O INICIA SESIÓN</span></a></li>
+                        @else
+                        <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
+                        @endif
                     </ul>
                 </div>
             </nav>
