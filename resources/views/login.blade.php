@@ -31,7 +31,7 @@
                 <img src="../resources/assets/login/img/Left-Side Background/Left-Side-Background_2.jpg" alt="">
                 <div class="logo-container">
                     <p class="logo-text">SPECTRA</p>
-                    <p class="secondary-logo-text-1"> LEARN, INSPIRE,</p>
+                    <p class="secondary-logo-text-1">" LEARN, INSPIRE,</p>
                     <p class="secondary-logo-text-2">CREATE</p>
                 </div>
                 <p class="caption-btn-SM">SOCIAL MEDIA</p>
@@ -49,7 +49,7 @@
                     <h1>Login</h1>
                     <div class="form-group-container-login">
                         <div class="form-group user-form">
-                            <label for="Username">Username</label>
+                            <label for="Username">Email</label>
                             <input type="text" class="input-login is-invalid" placeholder="&#xf007;" name="email" id="Username" autocomplete="off" minlength="3" maxlength="40">
                         </div>
                         <div class="form-group password-form">
