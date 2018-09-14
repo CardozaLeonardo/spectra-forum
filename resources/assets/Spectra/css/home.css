@@ -96,9 +96,9 @@ nav ul .Filter{
 }
 
 /* Opciones de Usuario oculta */
-/*nav .nav-wrapper .UserOptions{
+/* nav .nav-wrapper .UserOptions{
     display: none;
-}*/
+} */
 
 nav .nav-wrapper .UserOptions .dropdown .ButtonUserMenu{
     background: none;
@@ -127,7 +127,6 @@ nav .nav-wrapper .UserOptions .dropdown .dropdown-menu{
 }
 nav .nav-wrapper .UserOptions .dropdown .dropdown-menu .dropdown-item{
     font-size: 14px;
-    text-align: center;
     color: rgb(225,225,225);
     font-family: 'Poppins', sans-serif;
 }
@@ -303,8 +302,13 @@ nav .nav-wrapper .UserOptions .dropdown .dropdown-menu .dropdown-item:hover{
         padding-left: 15px;
     }  
     header{
+        position: fixed;
+        z-index: 20;
         height: 80px;
         background-image: url(../img/HeaderGradient.jpg);
+    }
+    .MainGeneral{
+        padding-top: 75px;
     }
 }
 @media screen and (max-width: 500px){
@@ -378,7 +382,7 @@ footer .FooterLogo h1{
     font-family: 'Coolvetica', sans-serif;
     font-weight: bold;
     line-height: 170px;
-    color: rgba(255, 255, 255, .9);
+    color: #bac6fa;
     letter-spacing: 4px;
 }
 footer .FollowContainer{

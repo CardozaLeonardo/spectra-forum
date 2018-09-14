@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../resources/assets/Forum/img/Favicon/favicon_forum.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../resources/assets/Forum/img/Favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -53,6 +53,7 @@
                             <div class="dropdown">
                                 <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('/storage/img/blank-profile.png') }}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
+                                    <a href="" class="dropdown-item"><i class="fas fa-user"></i> Perfil</a>
                                     <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
                                     <a href="{{ route('logout') }}" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </div>

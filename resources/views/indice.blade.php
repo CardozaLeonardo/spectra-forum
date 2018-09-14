@@ -44,6 +44,7 @@
                             <div class="dropdown">
                                 <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('/storage/img/blank-profile.png') }}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
+                                    <a href="" class="dropdown-item"><i class="fas fa-user"></i> Perfil</a>
                                     <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
                                     <a href="{{ route('logout') }}" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </div>
