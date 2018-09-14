@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Category;
-use App\Topic;
-use App\User;
 
-class TopicController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,9 +23,7 @@ class TopicController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-
-        return view('/forum/newentry')->with('categories', $categories);
+        //
     }
 
     /**
@@ -40,19 +34,7 @@ class TopicController extends Controller
      */
     public function store(Request $request)
     {
-       $newTopic = new Topic;
-       //$category = Category::where('name', $request->input('category'));
-       $user = Auth::user();
-       $category = Category::find($request->input('category'));
-
-       $newTopic->title = $request->input('title');
-       $newTopic->user_id = $user->id;
-       //$newTopic->category_id = $category->id;
-       
-       $newTopic->content = $request->input('Query');
-       $category->topic()->save($newTopic);
-
-       return redirect()->route('forum');
+        //
     }
 
     /**
@@ -63,7 +45,7 @@ class TopicController extends Controller
      */
     public function show($id)
     {
-        return $id;
+        //
     }
 
     /**

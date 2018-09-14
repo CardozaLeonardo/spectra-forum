@@ -24,6 +24,7 @@
 
 <?php 
   use Illuminate\Support\Facades\Auth;
+  use Illuminate\Support\Facades\Storage;
 ?>
 
 <body>
@@ -50,7 +51,7 @@
                         <li class="UserOptions">
                             <?php $user = Auth::user(); ?>
                             <div class="dropdown">
-                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
+                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('/storage/img/blank-profile.png') }}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
                                     <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
                                     <a href="{{ route('logout') }}" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>

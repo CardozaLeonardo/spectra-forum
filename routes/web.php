@@ -36,6 +36,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/forum/newentry/save', 'TopicController@store')->name('topic.store');
+Route::post('/forum/new_entry/save', 'TopicController@store')->name('topic.store');
 
 Route::get('/logout', 'LoginController@logout')->name('logout');
+
+Route::get('/users/{id}','UserController@show');

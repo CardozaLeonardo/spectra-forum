@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <?php $users = App\User::all(); ?>
+    <?php use Illuminate\Support\Facades\Storage; ?>
     
-
-    @foreach ($users as $user)
-      <p>{{ $user->email }}</p>
-      <p>{{ $user->name }}</p>
-    @endforeach
+    {{ asset('/storage/img/blank-profile.png') }}
 </body>
 </html>

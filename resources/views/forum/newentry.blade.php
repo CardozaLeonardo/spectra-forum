@@ -29,15 +29,15 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="" method="post">
+                <form action="{{ route('topic.store')}}" method="post">
                 {{ csrf_field() }}
                     <div class="form-group Topic-Title">
                         <label for="Password">Título de la Entrada</label>
-                        <input type="text" placeholder="Título" name="topic-title" autocomplete="off" maxlength="50" required>
+                        <input type="text" placeholder="Título" name="title" autocomplete="off" maxlength="50" required>
                     </div>
                     <div class="form-group Categories">
-                        <label for="Categorie">Categoría de la Entrada</label>
-                        <select name="Categorie" id="" required>
+                        <label for="category">Categoría de la Entrada</label>
+                        <select name="category" id="" required>
                             <!--<option value="" selected disabled>Elija una categoría</option>
                             <option value="Programación">Programación</option>
                             <option value="PHP">PHP</option>
@@ -52,7 +52,7 @@
                             <option value="Seguridad">Seguridad</option>
                             <option value="Videjuegos">Videjuegos</option>-->
                             @foreach($categories as $cat)
-                            <option value="{{ $cat->name }}">{{ $cat->name }}</option>
+                            <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                             @endforeach
                         </select>
                     </div>
