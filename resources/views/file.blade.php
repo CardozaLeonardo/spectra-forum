@@ -10,6 +10,8 @@
 <body>
     <?php use Illuminate\Support\Facades\Storage; ?>
     
-    {{ asset('/storage/img/blank-profile.png') }}
+    @foreach($users as $user)
+      {{ $user->email }}
+    @endforeach
 </body>
 </html>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\User;
 
 class UserController extends Controller
 {
@@ -43,9 +45,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($username)
     {
-        //
+        //$user = User::where('username', $username);
+        $users = DB::select("Select * from users where username =?", [$username]);
+
+        //return view('/file', ['users' => $users]);
+        return 'Email: ' . $users[0]->email . ' ID: ' . $users[0]->id;
     }
 
     /**
