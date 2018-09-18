@@ -86,7 +86,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($credenciales))
         {
-           return redirect()->route('home');
+           return $this->redirectTo = '/';
         }else{
             return redirect()->route('log');
             

@@ -41,3 +41,9 @@ Route::post('/forum/new_entry/save', 'TopicController@store')->name('topic.store
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::get('/users/{username}','UserController@show');
+
+//Route::get('/log/verify_r', 'LoginController@authenticateRedirect')->name()
+
+Route::get('/profile', function(){
+    return view('profile');
+});

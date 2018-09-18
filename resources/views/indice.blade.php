@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../resources/assets/Spectra/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="../resources/assets/login/css/Hover-master/css/hover.css">
-    <link rel="stylesheet" href="../resources/assets/Spectra/css/home.css">
-    <script src="../resources/assets/Spectra/js/app.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/Hover-master/css/hover.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
     <title>SPECTRA</title>
 </head>
 <?php use Illuminate\Support\Facades\Auth; use Illuminate\Support\Facades\Storage;?>
@@ -60,21 +60,21 @@
     </header>
     @yield('sidebar')
     <div class="side-bar d-flex flex-wrap justify-content-center">
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Home"><img src="../resources/assets/Spectra/img/SideBar/home.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Microsoft"><img src="../resources/assets/Spectra/img/SideBar/microsoft2.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Apple"><img src="../resources/assets/Spectra/img/SideBar/apple.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Open Source"><img src="../resources/assets/Spectra/img/SideBar/ubuntu.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Google"><img src="../resources/assets/Spectra/img/SideBar/search.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Android"><img src="../resources/assets/Spectra/img/SideBar/android.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Programación"><img src="../resources/assets/Spectra/img/SideBar/code.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Machine Learning"><img src="../resources/assets/Spectra/img/SideBar/chip.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Cryptocurrencys"><img src="../resources/assets/Spectra/img/SideBar/bitcoin.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Seguridad Informática"><img src="../resources/assets/Spectra/img/SideBar/security-on.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Videojuegos"><img src="../resources/assets/Spectra/img/SideBar/console-2.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Diseño"><img src="../resources/assets/Spectra/img/SideBar/layers.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Data Science"><img src="../resources/assets/Spectra/img/SideBar/big-data.svg" alt=""></a>
-        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Publicaciones"><img src="../resources/assets/Spectra/img/SideBar/message.svg" alt=""></a>
-        <a href="Forum/Forum.html" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Foro"><img src="../resources/assets/Spectra/img/SideBar/group.svg" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Home"><img src="{{ asset('img/SideBar/home.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Microsoft"><img src="{{ asset('img/SideBar/microsoft2.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Apple"><img src="{{ asset('img/SideBar/apple.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Open Source"><img src="{{ asset('img/SideBar/ubuntu.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Google"><img src="{{ asset('img/SideBar/search.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Android"><img src="{{ asset('img/SideBar/android.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Programación"><img src="{{ asset('img/SideBar/code.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Machine Learning"><img src="{{ asset('img/SideBar/chip.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Cryptocurrencys"><img src="{{ asset('img/SideBar/bitcoin.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Seguridad Informática"><img src=".{{ asset('img/SideBar/security-on.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Videojuegos"><img src="{{ asset('img/SideBar/console-2.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Diseño"><img src="{{ asset('img/SideBar/layers.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Data Science"><img src="{{ asset('img/SideBar/big-data.svg') }}" alt=""></a>
+        <a href="" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Publicaciones"><img src="{{ asset('img/SideBar/message.svg') }}" alt=""></a>
+        <a href="Forum/Forum.html" class="hvr-push" data-toggle="tooltip" data-placement="right" title="Foro"><img src="{{ asset('img/SideBar/group.svg') }}" alt=""></a>
     </div>
     <div class="container-fluid MainGeneral">
     

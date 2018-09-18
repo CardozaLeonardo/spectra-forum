@@ -4,7 +4,7 @@
 }
 @font-face{
     font-family: 'Coolvetica';
-    src: url('../fonts/coolvetica.woff') format('woff');
+    src: url('../font/coolvetica1.woff') format('woff');
 }
 body {
     margin: 0;

@@ -2,12 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500,900');
 @font-face {
     font-family: "Coolvetica";
-    src: url("../fonts/coolvetica.woff");
+    src: url("../font/coolvetica.woff");
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url("https://fonts.googleapis.com/css?family=Roboto:500,900");
 }
 
 @font-face {
     font-family: "Bebas";
-    src: url("../fonts/BebasNeue-webfont.woff");
+    src: url("../font/BebasNeue-webfont.woff");
 }
 
 body {
