@@ -24,7 +24,7 @@ Route::get('/file', function () {
 });
 
 Route::get('/forum', function(){
-    return view('forum.forum');
+    return view('forum');
 })->name('forum');
 
 Route::get('/forum/new_entry', 'TopicController@create')->name('forum.newentry')->middleware('user');

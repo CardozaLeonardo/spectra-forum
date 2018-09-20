@@ -22,9 +22,28 @@
     }
 </style>
 <body>
-  @yield('body')
     <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('js/validation.js') }}"></script>
+
+    @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @foreach ($errors->get('email') as $message)
+                  <strong>{{ $message }}</strong>
+                @endforeach
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+    @endif
+
+    @isset($loginMessage)
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{ $loginMessage }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endisset
     <div class="container">
         <div class="row login-container justify-content-center align-items-center">
             <div class="left-side order-1 order-md-0 col-sm-12 col-md-5 col-lg-6 p-0">
@@ -80,13 +99,7 @@
                             <label for="Email-Register">Email</label>
                             <input type="email" name="email" id="Email-Register" class="input-register" placeholder="&#xf0e0" autocomplete="off">
                         </div>
-                        @if ($errors->any())
-                                <span class="help-block">
-                                  @foreach ($errors->get('email') as $message)
-                                    <strong>{{ $message }}</strong>
-                                  @endforeach
-                                </span>
-                        @endif
+                        
                         <div class="form-group">
                             <label for="Username-Register">Username</label>
                             <input type="text" name="username" id="Username-Register" class="input-register" placeholder="&#xf007;" autocomplete="off" minlength="3" maxlength="15">

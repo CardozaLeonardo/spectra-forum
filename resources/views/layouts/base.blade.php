@@ -1,50 +1,67 @@
 
-<header>
-   @yield('header')
- <h1>PERFIL</h1>
- <div class="container">
-   <nav>
-            
-      <input type="checkbox" id="nav" class="hidden">
-            <label for="nav" class="nav-btn">
-                <i></i>
-                <i></i>
-                <i></i>
-            </label>
-            <div class="nav-wrapper" id="nav-wrapper">
-                <ul>
-                    <li><a href="{{ route('indice') }}" class="hvr-push">INICIO</a></li>
-                    <li><a href="#" class="hvr-push">NOTICIAS</a></li>
-                    <li><a href="#" class="hvr-push">DESTACADOS</a></li>
-                    <li><a href="#" class="hvr-push">BLOG</a></li>
-                    <li><a href="{{ route('forum') }}" class="hvr-push">FORO</a></li>
-                    <li>
-                        <form action="" method="get"><input type="text" placeholder="Buscar                                        &#xf002;"></form>
-                    </li>
-                    <li class="UserOptions">
-                        <div class="dropdown">
-                            <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="img/ImgProfile.png"
-                                    alt="" class="img-user"><span class="PersonalName">Mark Schnaider</span></button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
-                                <a href="" class="dropdown-item"><i class="fas fa-user"></i> Perfil</a>
-                                <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
-                                <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Agregar aquí la clase loginAnchor -->
-                    <li class="loginAnchor"><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE
-                                O INICIA SESIÓN</span></a></li>
-                </ul>
-            </div>
-        </nav>
-     </div>
-</header> 
-  
-  
+<!DOCTYPE html>
+<html>
 
+@section('head')
+<head>
+    <meta charset="utf-8" />
+    @section('icon')<meta http-equiv="X-UA-Compatible" content="IE=edge">@show
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @yield('add')
+</head>
+@show
+
+<body>
+@section('header')
+<header class="@yield('class')">
+ 
+<div class="container">
+            <nav>
+                <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+                <div class="nav-wrapper" id="nav-wrapper">
+                    <ul>
+                        <li><a href="{{ route('indice') }}" class="hvr-pop">INICIO</a></li>
+                        <li><a href="#" class="hvr-pop">NOTICIAS</a></li>
+                        <li><a href="#" class="hvr-pop">DESTACADOS</a></li>
+                        <li><a href="#" class="hvr-pop">BLOG</a></li>
+                        <li><a href="{{ route('forum') }}" class="hvr-pop">FORO</a></li>
+                        <li><form action="" method="get"><input type="text" placeholder="Buscar                                        &#xf002;"></form></li>
+                        @if(Auth::check())
+                        <li class="UserOptions">
+                            <?php $user = Auth::user(); ?>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('/storage/img/blank-profile.png') }}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
+                                    <a href="" class="dropdown-item"><i class="fas fa-user"></i> Perfil</a>
+                                    <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>
+                                    <a href="{{ route('logout') }}" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                </div>
+                            </div>
+                        </li>
+                        @else
+                        <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
+                        @endif
+                    </ul>
+                </div>
+            </nav>
+        </div>
+  @yield('posnav')
+</header>
+@show
+  
+<div class="content">
+   @yield('content')
+</div>
+
+@section('footer')
 <footer class="container-fluid">
-  @yield('footer')
+  
         <div class="row FooterLogoContainer">
             <div class="col-12 FooterLogo">
                 <h1>SPECTRA</h1>
@@ -139,3 +156,8 @@
             </div>
         </div>
     </footer>
+@show 
+</body>
+</html>
+
+
