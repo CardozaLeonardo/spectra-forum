@@ -51,7 +51,8 @@ class UserController extends Controller
         $users = DB::select("Select * from users where username =?", [$username]);
 
         //return view('/file', ['users' => $users]);
-        return 'Email: ' . $users[0]->email . ' ID: ' . $users[0]->id;
+        $User = User::find($users[0]->id);
+        return view('profile')->with('User', $User);
     }
 
     /**

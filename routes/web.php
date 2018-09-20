@@ -40,7 +40,7 @@ Route::post('/forum/new_entry/save', 'TopicController@store')->name('topic.store
 
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
-Route::get('/users/{username}','UserController@show');
+Route::get('/users/{username}','UserController@show')->name('users');
 
 //Route::get('/log/verify_r', 'LoginController@authenticateRedirect')->name()
 

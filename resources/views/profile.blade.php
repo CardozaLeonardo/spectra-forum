@@ -24,7 +24,10 @@
         <title>Profile</title>
     @endsection
 @endsection
-
+<?php 
+  use Illuminate\Support\Facades\Auth;
+  use Illuminate\Support\Facades\Storage;
+?>
 
     @section('class', 'special')
     @section('header')
@@ -45,17 +48,18 @@
         <div class="row InfoUser">
             <div class="col-lg-3 col-12">
                 <div class="imgProfile">
-                    <img src="{{ asset('img/ImgProfile.png') }}" alt="">
+                    <img src="{{ asset('storage/') }}/{{$User->photo_path}}" alt="">
                 </div>
             </div>
             <div class="col-lg-9 col-12 Information">
                 <div class="infoBio">
-                    <h1>Mark Schnaider</h1>
+                    <h1>{{ $User->name }} ~ {{ $User->username }}</h1>
                     <hr align="left">
-                    <p>Mark_Sch</p>
-                    <p>mark-sch@gmailcom</p>
+                    <!--<p>Mark_Sch</p> -->
+                    <!--<p>mark-sch@gmailcom</p>
                     <p>www.markportfolio.com</p>
-                    <p>FullStack Developer. Machine Learning Enthusiast.<br>DevOps at Microsoft.</p>
+                    <p>FullStack Developer. Machine Learning Enthusiast.<br>DevOps at Microsoft.</p>-->
+                    <p> {{ $User->info }} </p>
                 </div>
             </div>
         </div>

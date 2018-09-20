@@ -88,8 +88,8 @@ class LoginController extends Controller
         {
            return $this->redirectTo = '/';
         }else{
-            $loginMessage = "Usuario o contraseña incorrecta";
-            return view('login')->with('loginMessage', $loginMessage);
+            $message = "Usuario o contraseña incorrecta";
+            return view('login')->with('loginMessage', $message);
         }
 
     }
