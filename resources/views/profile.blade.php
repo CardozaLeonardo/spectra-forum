@@ -53,9 +53,9 @@
             </div>
             <div class="col-lg-9 col-12 Information">
                 <div class="infoBio">
-                    <h1>{{ $User->name }} ~ {{ $User->username }}</h1>
+                    <h1>{{ $User->username }}</h1>
                     <hr align="left">
-                    <!--<p>Mark_Sch</p> -->
+                    <p>{{ $User->name }}</p> 
                     <!--<p>mark-sch@gmailcom</p>
                     <p>www.markportfolio.com</p>
                     <p>FullStack Developer. Machine Learning Enthusiast.<br>DevOps at Microsoft.</p>-->

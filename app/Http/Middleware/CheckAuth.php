@@ -18,7 +18,8 @@ class CheckAuth
     {
         if(!(Auth::check()))
         {
-            return redirect()->route('log');
+            $previus = 'http://localhost/spectra-forum/public/forum/new_entry';
+            return redirect()->route('log')->with(['previus' => $previus]);
         }
         
         return $next($request);

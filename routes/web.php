@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('indice');
 })->name('indice');
 
-Route::get('/log', function(){
-    return view('login');
-})->name('log');
+Route::get('/log', 'LoginController@show')->name('log');
 
 Route::get('/file', function () {
     return view('file');
@@ -47,3 +45,5 @@ Route::get('/users/{username}','UserController@show')->name('users');
 Route::get('/profile', function(){
     return view('profile');
 });
+
+Route::get('/logr', 'LoginController@redirect')->name('log2');

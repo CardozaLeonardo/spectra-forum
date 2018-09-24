@@ -45,7 +45,7 @@
                             </div>
                         </li>
                         @else
-                        <li><a href="{{ route('log') }}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
+                        <li><a href="{{ route('log2') }}?previus={{ Request::fullUrl()}}" class="hvr-push"><i class="user fas fa-user"></i><span>REGÍSTRATE O INICIA SESIÓN</span></a></li>
                         @endif
                     </ul>
                 </div>

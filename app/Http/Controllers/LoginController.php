@@ -15,6 +15,11 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /*private $url;
+    private $message;
+    private $loginFail = false;*/
+
     public function index()
     {
         
@@ -63,36 +68,61 @@ class LoginController extends Controller
             $user->username = $request->input('username');
             $user->password = bcrypt($request->input('password'));
             $user->save();
-            return redirect()->route('log')->with('mensaje',$mensaje);
+            return redirect('/log')->route('log')->with('mensaje',$mensaje);
         }
  
         
     }
 
+
     /**
-     * Display the specified resource.
+     * Display the login.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        return view('login');
     }
+
+    public function redirect(Request $request)
+    {
+        if($request->has('previus'))
+        {
+            session(['prev' => $request->get('previus')]);
+        }
+
+        return redirect()->route('log');
+    }
+
 
     public function authenticate(Request $request)
     {
+        
         $credenciales = $request->only('email', 'password');
 
         if(Auth::attempt($credenciales))
         {
-           return $this->redirectTo = '/';
+           //return Redirect::to($request->input('previus'));
+
+           if($request->session()->has('prev'))
+           {
+               $url = session('prev');
+               $request->session()->forget('prev');
+               return Redirect::to($url);
+           }
+
+           return redirect()->route('indice');
         }else{
-            $message = "Usuario o contraseña incorrecta";
-            return view('login')->with('loginMessage', $message);
+            $info = "Usuario o contraseña incorrecta";
+            $message = ['info' => $info];
+            //$previus = $request->input('previus');
+            return Redirect::to($request->input('url') . '?fail=yes');
         }
 
     }
+
 
     /**
      * Show the form for editing the specified resource.

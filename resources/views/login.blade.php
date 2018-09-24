@@ -36,14 +36,14 @@
             </div>
     @endif
 
-    @isset($message)
+    @if(Request::has('fail'))
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>{{ $message }}</strong>
+        <strong>Clave o contraseña incorrecta</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    @endisset
+    @endif
     <div class="container">
         <div class="row login-container justify-content-center align-items-center">
             <div class="left-side order-1 order-md-0 col-sm-12 col-md-5 col-lg-6 p-0">
@@ -75,6 +75,11 @@
                             <label for="Password">Password</label>
                             <input type="password" class="input-login" placeholder="&#xf023;" name="password" id="PasswordLogin" autocomplete="off" minlength="6" maxlength="30">
                         </div>
+
+                        <div class="form-group">
+                           <input type="hidden" name="url" value="{{ Request::fullUrl() }}">
+                        </div>
+
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="RememberUser">
                             <label class="custom-control-label" for="RememberUser">Remember Me</label>
