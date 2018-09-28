@@ -590,7 +590,7 @@ main .card{
     margin-bottom: 20px;
     text-decoration: none;
     width: 100%;
-    display: none;
+    /*display: none;*/
 }
 main .card-container .card .card-title{
     margin-bottom: 5px;
@@ -936,7 +936,8 @@ footer .FooterRight .Copyright p{
     }
 }
 
-div .pag{
-    /*background: rgb(90, 110, 153);*/
+/*div .pag{
+    background: rgb(90, 110, 153);
     margin-top: 400px;
-}
+}*/
+

@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../../resources/assets/Forum/img/Favicon/NE.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
     integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../resources/assets/login/css/Hover-master/css/hover-min.css">
-    <link rel="stylesheet" href="../../resources/assets/Forum/css/emojionearea.min.css">
-    <script type="text/javascript" src="../../resources/assets/Forum/js/emojionearea.min.js"></script>
-    <link rel="stylesheet" href="../../resources/assets/Forum/css/new_entryStyle.css">
+    <link rel="stylesheet" href="{{ asset('css/Hover-master/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/emojionearea.min.css') }}">
+    <script type="text/javascript" src="{{ asset('js/emojionearea.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/new_entryStyle.css') }}">
     <title>Nueva Entrada</title>
 </head>
 <body>
-    <script src="../../resources/assets/Forum/js/NEValidation.js"></script>
+    <script src="{{ asset('js/NEValidation.js') }}"></script>
     <header>
-        <a href="index.html" class="back-forum"><i class="fas fa-arrow-circle-left"></i></a>
+        <a href="{{ route('forum') }}" class="back-forum"><i class="fas fa-arrow-circle-left"></i></a>
         <h1>Nueva Entrada</h1>
     </header>
     <main class="container">
         <div class="fixed-button">
-            <a href="index.html" data-toggle="tooltip" data-placement="top" title="Cancelar" class="hvr-bounce-in"><button class="btn"><i class="fas fa-plus"></i></button></a> 
+            <a href="{{ route('forum') }}" data-toggle="tooltip" data-placement="top" title="Cancelar" class="hvr-bounce-in"><button class="btn"><i class="fas fa-plus"></i></button></a> 
         </div>
         <div class="row">
             <div class="col-12">

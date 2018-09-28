@@ -17,13 +17,7 @@ Route::get('/', function () {
 
 Route::get('/log', 'LoginController@show')->name('log');
 
-Route::get('/file', function () {
-    return view('file');
-});
-
-Route::get('/forum', function(){
-    return view('forum');
-})->name('forum');
+Route::get('/forum','TopicController@index')->name('forum');
 
 Route::get('/forum/new_entry', 'TopicController@create')->name('forum.newentry')->middleware('user');
 
@@ -47,3 +41,5 @@ Route::get('/profile', function(){
 });
 
 Route::get('/logr', 'LoginController@redirect')->name('log2');
+
+Route::get('/forum/{category}','TopicController@show')->name('forum.cat');
