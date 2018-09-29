@@ -19,9 +19,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
             crossorigin="anonymous">
-        <link rel="stylesheet" href="../../login/css/Hover-master/css/hover-min.css">
+        <link rel="stylesheet" href="{{ asset('css/Hover-master/css/hover-min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/profileStyles.css')}}">
-        <title>Profile</title>
+        <title>Profile - {{ $User->username }}</title>
     @endsection
 @endsection
 <?php 
@@ -39,23 +39,31 @@
 
     @section('content')
     <div class="container">
+    
+      @if(Auth::check() && (Auth::user()->username == $username))
         <div class="row EditProfile">
             <div class="col-12">
-                <div class="EditBtn"><a href="" class="EditBtnAnchor" data-toggle="tooltip" data-placement="left" title="Editar Perfil"><button
+                <div class="EditBtn"><a href="" class="EditBtnAnchor" data-toggle="tooltip" data-placement="left" title="Editar perfil"><button
                             type="button" class="btn"><i class="fas fa-user-edit"></i></button></a></div>
             </div>
         </div>
+      @endif
+
         <div class="row InfoUser">
             <div class="col-lg-3 col-12">
                 <div class="imgProfile">
-                    <img src="{{ asset('storage/') }}/{{$User->photo_path}}" alt="">
+                    @if(isset($User->photo_path))
+                      <img src="{{ asset('storage/') }}/{{$User->photo_path}}" alt="">
+                    @else
+                      <img src="{{ asset('storage/profile_.png') }}" alt="">
+                    @endif
                 </div>
             </div>
             <div class="col-lg-9 col-12 Information">
                 <div class="infoBio">
-                    <h1>{{ $User->username }}</h1>
+                    <h1>{{ $User->name }}</h1>
                     <hr align="left">
-                    <p>{{ $User->name }}</p> 
+                    <p>{{ $User->username }}</p> 
                     <!--<p>mark-sch@gmailcom</p>
                     <p>www.markportfolio.com</p>
                     <p>FullStack Developer. Machine Learning Enthusiast.<br>DevOps at Microsoft.</p>-->

@@ -68,7 +68,7 @@ class LoginController extends Controller
             $user->username = $request->input('username');
             $user->password = bcrypt($request->input('password'));
             $user->save();
-            return redirect('/log')->route('log')->with('mensaje',$mensaje);
+            return redirect()->route('log')->with('mensaje',$mensaje);
         }
  
         

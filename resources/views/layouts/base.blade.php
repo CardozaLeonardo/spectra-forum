@@ -36,7 +36,11 @@
                         <li class="UserOptions">
                             <?php $user = Auth::user(); ?>
                             <div class="dropdown">
-                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('storage/') }}/{{$user->photo_path}}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
+                                @if(isset($user->photo_path))
+                                  <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('storage/') }}/{{$user->photo_path}}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
+                                @else
+                                <button class="dropdown-toggle ButtonUserMenu" data-toggle="dropdown"><img src="{{ asset('storage/profile_.png') }}" alt="" class="img-user"><span class="PersonalName"></span>{{ $user->username }}</button>
+                                @endif
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserMenu">
                                     <a href="{{ route('users', ['username' => $user->username])}}" class="dropdown-item"><i class="fas fa-user"></i> Perfil</a>
                                     <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Configuración</a>

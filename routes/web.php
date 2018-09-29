@@ -43,3 +43,5 @@ Route::get('/profile', function(){
 Route::get('/logr', 'LoginController@redirect')->name('log2');
 
 Route::get('/forum/{category}','TopicController@show')->name('forum.cat');
+
+Route::get('/users{username}/config', 'UserController@update')->name('profile.config');

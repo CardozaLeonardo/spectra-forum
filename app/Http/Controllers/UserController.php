@@ -49,10 +49,11 @@ class UserController extends Controller
     {
         //$user = User::where('username', $username);
         $users = DB::select("Select * from users where username =?", [$username]);
+        $username;
 
         //return view('/file', ['users' => $users]);
         $User = User::find($users[0]->id);
-        return view('profile')->with('User', $User);
+        return view('profile')->with('User', $User)->with('username', $username);
     }
 
     /**
